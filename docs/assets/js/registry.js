@@ -42,10 +42,10 @@ function guardar() {
 
 // Imprimir visitantes
 const tabla = document.getElementById('tabla');
-const tablaAdm = document.getElementById('tablaGrande')
+const tablaAdm = document.getElementById('tablaGrande');
 
 db.collection("visitors").onSnapshot((querySnapshot) => {
-  tablaAdm.innerHTML = '';
+  // tablaAdm.innerHTML = '';
   querySnapshot.forEach((doc) => {
       console.log(`${doc.id} => ${doc.data()}`);
       tablaAdm.innerHTML += `
